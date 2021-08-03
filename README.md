@@ -24,10 +24,7 @@ may be added in future versions.
 etc.
 
 *Output to console will be of form...*
-"There are ___ reservable sites and ___ first-come-first-serve sites available for your selected date(s).
+
+"There are ___ reservable sites and ___ first-come-first-serve sites available for your selected date(s).""
 
 CAMPGROUND NAME     # OF AVAILABLE SITES
-
-
-
-"
