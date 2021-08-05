@@ -1,13 +1,15 @@
-﻿using OpenQA.Selenium;
+﻿using Model;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
+using System.Collections.Generic;
 
 namespace Controller
 {
     public class Control
     {
 
-        public static void CheckAvailable(string startDate, string endDate)
+        public static List<Campground> CheckAvailable(string startDate, string endDate)
         {
             using (var driver = new ChromeDriver())
             {
@@ -20,6 +22,8 @@ namespace Controller
                 Console.Read();
                 //driver.Navigate().
             }
+
+            return null;
         }
     }
 }

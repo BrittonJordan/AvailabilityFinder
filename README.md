@@ -25,6 +25,6 @@ etc.
 
 *Output to console will be of form...*
 
-"There are ___ reservable sites and ___ first-come-first-serve sites available for your selected date(s).""
+"There are ___ reservable sites and ___ first-come-first-serve sites available for your selected date(s)."
 
-CAMPGROUND NAME     # OF AVAILABLE SITES
+CAMPGROUND NAME     # OF RESERVABLE SITES     # OF FIRST-COME-FIRST-SERVE
