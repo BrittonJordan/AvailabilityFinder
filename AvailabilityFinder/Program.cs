@@ -1,4 +1,6 @@
 ﻿using System;
+using Controller;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
 namespace AvailabilityFinder
@@ -7,19 +9,16 @@ namespace AvailabilityFinder
     {
         static void Main(string[] args)
         {
-            using (var driver = new ChromeDriver())
-            {
-                driver.Url = "https://www.recreation.gov/camping/campgrounds/233730/availability";
-                driver.Navigate().GoToUrl("https://www.recreation.gov/camping/campgrounds/233730/availability");
-                var dateField = driver.FindElementById("single-date-picker-1");
-                dateField.Clear();
-                //dateField.SendKeys("08/04/2021");
-                Console.Read();
-                //driver.Navigate().
-            }
+            // VIEW
+            Console.WriteLine("CAMPSITE AVAILABILITY FINDER");
+            Console.WriteLine("Enter desired check-in date of stay:");
+            string startDate = Console.ReadLine();
+            Console.WriteLine("Enter desired check-out date of stay:");
+            string endDate = Console.ReadLine();
 
+            // the view will invoke methods of the controller, controller will report info to be outputted in view via events
+            Control.CheckAvailable(startDate, endDate);
 
-            Console.WriteLine("Hello World!");
         }
     }
 }
