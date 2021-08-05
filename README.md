@@ -39,9 +39,10 @@ TO DO...
 
 
 WORK LOG
-8/2/2021  3 hrs
+
+- 8/2/2021  3 hrs
 	- Start project, formulate plan and create README. Research Selenium
-8/3/2021  2 hrs
+- 8/3/2021  2 hrs
 	- Practice using Selenium
-8/5/2021
+- 8/5/2021
 	- Code foundation for project MVC. 
