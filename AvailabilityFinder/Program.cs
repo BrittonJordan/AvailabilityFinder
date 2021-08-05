@@ -9,19 +9,26 @@ namespace AvailabilityFinder
     {
         static void Main(string[] args)
         {
-            // $$ VIEW
+            Control theControl = new Control();
+            
+            // Set up view and query user
             Console.WriteLine("CAMPSITE AVAILABILITY FINDER");
             Console.WriteLine("Enter desired check-in date of stay:");
             string startDate = Console.ReadLine();
             Console.WriteLine("Enter desired check-out date of stay:");
             string endDate = Console.ReadLine();
 
-            // $$ the view will invoke methods of the controller, controller will report info to be outputted in view via events
-            List<Campground> availableSites = Control.CheckAvailable(startDate, endDate);
+            List<Campground> availableSites = theControl.CheckAvailable(startDate, endDate);
 
+            Console.WriteLine("There are " + theControl.TotalReservable + " reservable sites and " + theControl.TotalReservable +" first-come-first-serve sites available for your selected date(s).");
+
+            Console.WriteLine("CAMPGROUND NAME            RESERVABLE              FCFS");
+            //$$ work out formatting of this later
             foreach(Campground campground in availableSites)
             {
-                Console.WriteLine(campground.Name);
+                Console.Write(campground.Name);
+                Console.Write(" " + campground.ReservableCount);
+                Console.Write(" " + campground.FcfsCount);
             }
         }
     }

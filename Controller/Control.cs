@@ -8,8 +8,10 @@ namespace Controller
 {
     public class Control
     {
+        public int TotalReservable { get; private set; }
+        public int TotalFCFS { get; private set; }
 
-        public static List<Campground> CheckAvailable(string startDate, string endDate)
+        public List<Campground> CheckAvailable(string startDate, string endDate)
         {
             using (var driver = new ChromeDriver())
             {
@@ -19,7 +21,6 @@ namespace Controller
                 dateField.SendKeys(Keys.Left);
                 dateField.SendKeys(Keys.Backspace);
                 //dateField.SendKeys("08/04/2021");
-                Console.Read();
                 //driver.Navigate().
             }
 
