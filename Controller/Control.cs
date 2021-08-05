@@ -11,20 +11,26 @@ namespace Controller
         public int TotalReservable { get; private set; }
         public int TotalFCFS { get; private set; }
 
-        public List<Campground> CheckAvailable(string startDate, string endDate)
+        public List<Campground> CheckAvailable(string location, string startDate, string endDate)
         {
+            string startDateURL = startDate.Substring(0, 2) + "%2F" + startDate.Substring(3, 2) + "%2F" + startDate.Substring(6, 4);
+            string endDateURL = endDate.Substring(0, 2) + "%2F" + endDate.Substring(3, 2) + "%2F" + endDate.Substring(6, 4);
+            string recGovURL = "https://www.recreation.gov/search?q=" + location + "&inventory_type=camping&sort=available&checkin=" + startDateURL + "&checkout=" + endDateURL;
+            
             using (var driver = new ChromeDriver())
             {
-                driver.Url = "https://www.recreation.gov/camping/campgrounds/233730/availability";
-                driver.Navigate().GoToUrl("https://www.recreation.gov/camping/campgrounds/233730/availability");
-                var dateField = driver.FindElementById("single-date-picker-1");
-                dateField.SendKeys(Keys.Left);
-                dateField.SendKeys(Keys.Backspace);
+                // https://www.recreation.gov/search?q=84405&inventory_type=camping&sort=available&checkin=08%2F06%2F2021&checkout=08%2F07%2F2021
+                driver.Url = recGovURL;
+                driver.Navigate().GoToUrl(recGovURL);
+                //var dateField = driver.FindElementById("single-date-picker-1");
+                //dateField.SendKeys(Keys.Left);
+                //dateField.SendKeys(Keys.Backspace);
                 //dateField.SendKeys("08/04/2021");
                 //driver.Navigate().
+                Console.Read();
             }
-
-            return null;
+            List<Campground> sites = new List<Campground>();
+            return sites;
         }
     }
 }

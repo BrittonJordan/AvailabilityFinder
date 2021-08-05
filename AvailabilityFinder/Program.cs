@@ -13,12 +13,14 @@ namespace AvailabilityFinder
             
             // Set up view and query user
             Console.WriteLine("CAMPSITE AVAILABILITY FINDER");
+            Console.WriteLine("Enter ZIP code or City name of desired camping location");
+            string location = Console.ReadLine();
             Console.WriteLine("Enter desired check-in date of stay:");
             string startDate = Console.ReadLine();
             Console.WriteLine("Enter desired check-out date of stay:");
             string endDate = Console.ReadLine();
 
-            List<Campground> availableSites = theControl.CheckAvailable(startDate, endDate);
+            List<Campground> availableSites = theControl.CheckAvailable(location, startDate, endDate);
 
             Console.WriteLine("There are " + theControl.TotalReservable + " reservable sites and " + theControl.TotalReservable +" first-come-first-serve sites available for your selected date(s).");
 

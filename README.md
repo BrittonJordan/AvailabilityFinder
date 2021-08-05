@@ -45,4 +45,4 @@ WORK LOG
 - 8/3/2021  2 hrs
 	- Practice using Selenium
 - 8/5/2021
-	- Code foundation for project MVC. 
+	- Code foundation for project MVC
