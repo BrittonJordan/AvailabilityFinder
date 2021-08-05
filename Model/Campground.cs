@@ -10,9 +10,9 @@ namespace Model
 
         public string Name { get { return name; } }
 
-        public int ReservableCount { get { return reservableCount} }
+        public int ReservableCount { get { return reservableCount; } }
 
-        public int FcfsCount { get { return fcfsCount} }
+        public int FcfsCount { get { return fcfsCount; } }
 
         public Campground(string _name)
         {
