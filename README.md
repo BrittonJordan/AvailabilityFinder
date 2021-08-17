@@ -25,17 +25,23 @@ etc.
 
 *Output to console will be of form...*
 
-"There are ___ reservable sites and ___ first-come-first-serve sites available for your selected date(s)."
+"There are ___ reservable sites and ___ first-come-first-serve sites available for your selected date(s) within a 200 mile radius of ____"
 
-CAMPGROUND NAME     # OF RESERVABLE SITES     # OF FIRST-COME-FIRST-SERVE
+CAMPGROUND NAME     TOTAL # OF SITES     # OF RESERVABLE SITES     # OF FIRST-COME-FIRST-SERVE
+Mirror Lake				79						10							50
+-
+-
 
 
 TO DO...
 - error checking on input date
 - format output
-- create XML doc containing websites of all relevant campgrounds, will be read in by Control
 
-- input the given date in the date box
+Next Time:
+- finish watching video (below)
+- navigate to each of the campground sites in turn by either storing their URLs in a collection or navigating with the Chrome driver
+- scrape the collection of campsite information for each campground, then parse needed information afterwards
+
 
 
 WORK LOG
@@ -44,5 +50,13 @@ WORK LOG
 	- Start project, formulate plan and create README. Research Selenium
 - 8/3/2021  2 hrs
 	- Practice using Selenium
-- 8/5/2021
+- 8/5/2021  3 hrs
 	- Code foundation for project MVC
+- 8/17/2021  2.5 hrs
+	- research about Web scraping, minor changes
+	- https://www.youtube.com/watch?v=gRoMR3NcpPQ  helpful video about webscraping collections
+
+
+Resources
+- https://www.youtube.com/watch?v=gRoMR3NcpPQ Webscraping collections
+

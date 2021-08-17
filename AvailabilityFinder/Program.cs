@@ -22,7 +22,7 @@ namespace AvailabilityFinder
 
             List<Campground> availableSites = theControl.CheckAvailable(location, startDate, endDate);
 
-            Console.WriteLine("There are " + theControl.TotalReservable + " reservable sites and " + theControl.TotalReservable +" first-come-first-serve sites available for your selected date(s).");
+            Console.WriteLine("There are " + theControl.TotalReservable + " reservable sites and " + theControl.TotalFCFS +" first-come-first-serve sites available for your selected date(s).");
 
             Console.WriteLine("CAMPGROUND NAME            RESERVABLE              FCFS");
             //$$ work out formatting of this later
